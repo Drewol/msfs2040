@@ -29,6 +29,7 @@ bind_interrupts!(struct Irqs {
 });
 use {defmt_rtt as _, panic_probe as _};
 
+//Mostly borrowed from embassy examples
 #[embassy_executor::main]
 async fn main(_spawner: Spawner) {
     let p = embassy_rp::init(Default::default());
